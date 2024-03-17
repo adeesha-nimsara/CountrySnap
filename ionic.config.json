@@ -1,0 +1,7 @@
+{
+  "name": "CountrySnap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
