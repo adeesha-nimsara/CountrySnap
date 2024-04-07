@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{singleCountry[0]?.name.common}}</ion-title>
+    <ion-progress-bar type="indeterminate" *ngIf="!loaded"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="w-full custom-background">
+    <div class="w-full max-w-screen-xl mx-auto text-center">
+      <ion-grid> <!--Image-->
+        <ion-row>
+          <ion-col *ngFor="let item of pexelPhoto">
+            <ion-card class="p-5 rounded-2xl">
+              <img alt="" src="{{item.src.landscape}}" class="w-full" />
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid *ngFor="let item of singleCountry"> <!--Details-->
+        <ion-row>
+          <ion-col size="12" sizeMd="6">
+            <ion-card class="text-start p-md-5 rounded-2xl">
+              <ion-card-header>
+                <ion-grid class="m-0">
+                  <ion-row class="ion-justify-content-between ion-align-items-center">
+                    <ion-col>
+                      <ion-card-title>{{item.name.common}}</ion-card-title>
+                      <ion-card-subtitle>Country In {{item.subregion}}</ion-card-subtitle>
+                    </ion-col>
+                    <ion-col size="2  ">
+                      <img alt="" src="{{item.coatOfArms.svg}}" class="" />
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-card-header>
+              <!-- <ion-card-content>
+                "Embark on an adventure to discover the wonders of {{item.name.common}} - {{item.name.official}}.
+                Immerse yourself in the vibrant culture and breathtaking landscapes this country has to offer. Whether
+                you're strolling through bustling cities or exploring tranquil natural marvels, ""[Country Name]"" is sure
+                to captivate your senses. Get ready to indulge in the delectable cuisine and experience the warmth of
+                local hospitality. Don't miss out on exploring the heart of ""[Country Name]"" - its capital city,
+                ""[Capital]"", which pulsates with life and history. Located in the ""[Region]"" region, ""[Country
+                Name]"" is a part of the ""[Sub Region]"" sub-region, boasting a population of ""[Population]"". Remember
+                to exchange your currency, the ""[Currency]"", to make the most of your adventure in ""[Country Name]"".
+                Let the journey begin!"
+              </ion-card-content> -->
+            </ion-card>
+            <ion-card class="p-5 rounded-2xl">
+              <img alt="" src="{{item.flags.png}}" class="w-full" />
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" sizeMd="6">
+            <ion-card class="p-5 rounded-2xl px-12 text-start">
+              <ion-text>
+                <strong>Official Name :</strong> {{item.name.official}}
+              </ion-text>
+            </ion-card>
+            <ion-card class="p-5 rounded-2xl px-12 text-start">
+              <ion-text>
+                <strong>Capital :</strong> {{item.capital}}
+              </ion-text>
+            </ion-card>
+            <ion-card class="p-5 rounded-2xl px-12 text-start">
+              <ion-text>
+                <strong>Population :</strong> {{item.population}}
+              </ion-text>
+            </ion-card>
+            <ion-card class="p-5 rounded-2xl px-12 text-start">
+              <ion-text *ngFor="let currency of item.currencies | keyvalue">
+                <strong>currency :</strong> {{ currency.key }}
+              </ion-text>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+</ion-content>

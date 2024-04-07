@@ -24,3 +24,17 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+/*Tailwind css config*/
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.custom-background{
+    background-image: linear-gradient(90deg, #0d00ff0f 0%, #00ff9d0f 35%, #bf00ff1b 100%);
+    backdrop-filter: blur(1000px);
+    }
+
+// ion-toolbar{
+//     --background: rgba(200, 21, 21, 0);
+// }
