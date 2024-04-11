@@ -4,6 +4,8 @@ Explore the world through a snap.
 
 Demo : https://country-snap.web.app/
 
+![country-snap web app_details_LKA (2)](https://github.com/adeesha-nimsara/CountrySnap/assets/64556076/ee31e483-a193-474e-9939-b8ff6250609f)
+
 ## Description
 
 CountrySnap is a hybrid application developed with Angular, Ionic, and Capacitor. It seamlessly integrates data from REST Countries and Pexels APIs to provide users with captivating visual journeys of diverse cultures and breathtaking landscapes.
